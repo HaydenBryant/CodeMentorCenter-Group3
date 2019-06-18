@@ -1,0 +1,28 @@
+{
+  "name": "codementorcenter-group3",
+  "version": "1.0.0",
+  "description": "This repo is for group 3 to share our project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HaydenBryant/CodeMentorCenter-Group3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HaydenBryant/CodeMentorCenter-Group3/issues"
+  },
+  "homepage": "https://github.com/HaydenBryant/CodeMentorCenter-Group3#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.0",
+    "nodemon": "^1.19.1",
+    "validator": "^11.0.0"
+  }
+}
