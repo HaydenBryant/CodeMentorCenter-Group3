@@ -5,6 +5,10 @@ const passport = require("passport");
 
 const app = express();
 
+// Body parser middleware
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, err => {
