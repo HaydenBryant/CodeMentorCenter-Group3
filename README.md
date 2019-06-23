@@ -15,3 +15,4 @@ The world's FREE coding and software development mentorship program. Also, one o
 |  0.2.3  | 06-18-19 | Created validation - login, profile, register | RS          |
 |  0.2.4  | 06-18-19 | Created model schemas - profile, user         | RS          |
 |  0.2.5  | 06-18-19 | Created MongoDB Atlas cluster                 | RS          |
+|  0.2.6  | 06-23-19 | Created React App                             | HD          |
