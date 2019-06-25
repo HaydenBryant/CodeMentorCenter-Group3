@@ -23,3 +23,5 @@ The world's FREE coding and software development mentorship program. Also, one o
 |  0.4.0  | 06-24-19 | Added in Auth: Login, Register                              | SB          |
 |  0.4.1  | 06-25-19 | Refactored import components in App.js pointing to index.js | SB          |
 |  0.4.2  | 06-25-19 | Added HeroBanner component                                  | SB          |
+
+..
