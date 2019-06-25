@@ -12,6 +12,9 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+// Enabling built-in middleware to use Static directory
+app.use(express.static('public'));
+
 // DB Config
 const db = require("./config/keys").mongoURI;
 
