@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import HeroBanner from './HeroBanner';
 import CTARegister from './CTARegister';
+import Search from './Search';
 
 const Landing = () => {
   return (
@@ -9,6 +9,9 @@ const Landing = () => {
       <div className='landing-inner'>
         <HeroBanner />
         <CTARegister />
+        <div className='search-landing'>
+          <Search />
+        </div>
       </div>
     </section>
   );
