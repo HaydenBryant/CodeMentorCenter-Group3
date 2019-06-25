@@ -24,3 +24,4 @@ The world's FREE coding and software development mentorship program. Also, one o
 |  0.4.1  | 06-25-19 | Refactored import components in App.js pointing to index.js | SB          |
 |  0.4.2  | 06-25-19 | Added Navigation component w/ front-end styling             | SB          |
 |  0.4.3  | 06-25-19 | Added HeroBanner component w/ front-end styling             | SB          |
+|  0.4.4  | 06-25-19 | Added CTA register btn component w/ front-end styling       | SB          |
