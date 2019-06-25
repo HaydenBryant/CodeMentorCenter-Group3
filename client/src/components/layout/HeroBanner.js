@@ -1,9 +1,12 @@
 import React, { Fragment } from 'react';
+import banner from '../../images/hero_banner.jpg';
 
 const HeroBanner = () => {
   return (
     <Fragment>
-      <h1 className='x-large'>CMC Hero Banner</h1>
+      <div className='heroImg'>
+        <img src={banner} alt='Code Mentor Center | Making software stronger...one developer at a time.' />
+      </div>
     </Fragment>
   );
 };

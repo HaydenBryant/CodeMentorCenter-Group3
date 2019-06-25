@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../images/logo_cmc_top.gif';
+import cmcLogo from '../../images/logo_cmc_top.gif';
 
 const Navbar = () => {
   return (
     <nav className='navbar bg-white'>
-      <Link to='/' className='logo'>
-        <img src={logo} alt='Code Mentor Center' />
-      </Link>
+      <div className='logo'>
+        <Link to='/'>
+          <img src={cmcLogo} alt='Code Mentor Center' />
+        </Link>
+      </div>
       <ul>
         <li>
           <Link to='/mentors'>MENTORS</Link>
