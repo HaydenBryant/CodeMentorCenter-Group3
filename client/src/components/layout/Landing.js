@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import HeroBanner from './HeroBanner';
 
 const Landing = () => {
   return (
     <section className='landing'>
       <div className='dark-overlay'>
         <div className='landing-inner'>
-          <h1 className='x-large'>Code Mentor Center</h1>
+          <HeroBanner />
           <p className='lead'>
             Making software stronger...one developer at a time.
           </p>
