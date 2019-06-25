@@ -79,48 +79,6 @@ class EditProfile extends Component {
                         <small className="req">* = Required Fields</small>
                         <form onSubmit={this.onSubmit}>
 
-                            <input
-                                type='text'
-                                placeholder="* Profile Name"
-                                name="handle"
-                                value={this.state.handle}
-                                onChange={this.onChange}
-                                required
-                            /> <br />
-                            <input
-                                type='checkbox'
-                                name="Mentor"
-                                value={this.state.isAMentor}
-                                onChange={this.onChange}
-                                required
-                            /> <br />
-                            <input
-                                type='checkbox'
-                                name="Mentee"
-                                value={this.state.isAMentee}
-                                onChange={this.onChange}
-                                required
-                            /> <br />
-                            <input
-                                type='date'
-                                placeholder="* Date of Birth"
-                                name="DOB"
-                                value={this.state.DOB}
-                                onChange={this.onChange}
-                                required
-                            /> <br />
-                            <input
-                                type='text'
-                                placeholder="Company Name"
-                                name="Company"
-                                value={this.state.company}
-                                onChange={this.onChange}
-                            /> <br />
-                            <input
-                                type="submit"
-                                value="submit"
-                                className="btn btn-info btn-block mt-4"
-                            />
                         </form>
                     </div>
                 </div>
