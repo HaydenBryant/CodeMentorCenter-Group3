@@ -16,6 +16,7 @@ code {
 /* Global Styles */
 :root {
   --primary-color: #3b8beb;
+  --red-color: #b23850;
   --dark-color: #343a40;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
@@ -69,11 +70,6 @@ img {
 .large {
   font-size: 3rem;
   line-height: 1.2;
-  margin-bottom: 1rem;
-}
-
-.lead {
-  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
@@ -152,6 +148,11 @@ img {
   margin-right: 0.5rem;
   transition: opacity 0.2s ease-in;
   outline: none;
+}
+
+.btn-rounded {
+  border-radius: 30px;
+  padding: 6px 33px 3px;
 }
 
 .badge {
@@ -302,7 +303,6 @@ button {
 .table th {
   background: var(--light-color);
 }
-
 /* Navbar */
 .navbar {
   display: flex;
@@ -324,7 +324,7 @@ button {
 }
 
 .navbar ul li a {
-  color: #000;
+  color: var(--dark-color);
   padding: 0.45rem;
   margin: 0 0.25rem;
 }
@@ -371,6 +371,22 @@ button {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.ctaRegister .lead {
+  font-size: 1.5rem;
+  margin: 0;
+  color: var(--dark-color);
+}
+
+.cta-btn {
+  margin: 2rem 0;
+}
+
+.ctaRegister p {
+  margin: 0 auto;
+  width: 80%;
+  color: var(--dark-color);
 }
 
 /* Profiles Page */
