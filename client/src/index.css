@@ -618,7 +618,7 @@ button {
 .social-ct,
 .location-ct,
 .sitemap-ct {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   line-height: 1rem;
   text-align: center;
 }
@@ -643,7 +643,7 @@ button {
 }
 
 .social-ct ul li {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .social-ct ul li:last-child {
@@ -651,7 +651,7 @@ button {
 }
 
 .copyright {
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   line-height: 12px;
 }
 
