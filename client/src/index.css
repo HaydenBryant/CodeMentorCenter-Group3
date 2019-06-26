@@ -611,11 +611,12 @@ button {
     font-size: 1rem;
   }
 
-  /* Navbar */
+  /* Navigation compondent */
   .navbar {
     display: block;
+    position: relative;
     text-align: center;
-    height: 270px;
+    height: auto;
   }
 
   .navbar ul {
@@ -651,10 +652,24 @@ button {
     height: 100%;
   }
 
-  .landing {
-    top: 270px;
+  /* Search Compondent */
+  .search {
+    margin: 0 auto;
+    width: 90%;
+    height: 40px;
+    background: #fff;
+    border-radius: 21px;
+    box-shadow: 3px 5px 12px #51585b;
   }
 
+  .search button {
+    margin-top: -34px;
+  }
+
+  /* Landing Page */
+  .landing {
+    top: 0;
+  }
   /* Profiles Page */
   .profile {
     grid-template-columns: 1fr;
