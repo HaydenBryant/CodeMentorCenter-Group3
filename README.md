@@ -26,3 +26,6 @@ The world's FREE coding and software development mentorship program. Also, one o
 |  0.4.3  | 06-25-19 | Added HeroBanner component w/ front-end styling             | SB          |
 |  0.4.4  | 06-25-19 | Added CTA register btn component w/ front-end styling       | SB          |
 |  0.4.5  | 06-25-19 | Added Search component w/ front-end styling                 | SB          |
+|  0.5.0  | 06-25-19 | Enable middleware static directory in server.js             | KP          |
+|  0.5.1  | 06-25-19 | Added Mentees.js to component                               | KP          |
+|  0.5.2  | 06-25-19 | Added Mentors.js to component                               | KP          |
