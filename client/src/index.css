@@ -16,6 +16,8 @@ code {
 /* Global Styles */
 :root {
   --primary-color: #3b8beb;
+  --red-color: #b23850;
+  --lightblue-color: #c4dbf6;
   --dark-color: #343a40;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
@@ -69,11 +71,6 @@ img {
 .large {
   font-size: 3rem;
   line-height: 1.2;
-  margin-bottom: 1rem;
-}
-
-.lead {
-  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
@@ -152,6 +149,11 @@ img {
   margin-right: 0.5rem;
   transition: opacity 0.2s ease-in;
   outline: none;
+}
+
+.btn-rounded {
+  border-radius: 30px;
+  padding: 6px 33px 3px;
 }
 
 .badge {
@@ -303,7 +305,11 @@ button {
   background: var(--light-color);
 }
 
-/* Navbar */
+.landing h4 {
+  font-size: 1.4rem;
+}
+
+/* Top Navigation Component */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -324,7 +330,7 @@ button {
 }
 
 .navbar ul li a {
-  color: #000;
+  color: var(--dark-color);
   padding: 0.45rem;
   margin: 0 0.25rem;
 }
@@ -348,11 +354,160 @@ button {
   display: block;
 }
 
-/* Hero Banner */
+/* CMC Hero Banner Component */
 .heroImg {
   width: 100%;
   height: 100%;
   display: block;
+}
+
+/* Search Option Component */
+.search-landing {
+  position: relative;
+  display: block;
+  top: 60px;
+  width: 100%;
+  padding: 55px 0;
+  background-color: #8590aa;
+}
+
+.search {
+  margin: 0 auto;
+  width: 500px;
+  height: 40px;
+  background: #fff;
+  border-radius: 21px;
+  box-shadow: 3px 5px 12px #51585b;
+}
+
+.search input {
+  width: 370px;
+  padding: 11px 5px;
+  float: left;
+  color: #999;
+  border: 0;
+  background: transparent;
+  border-radius: 3px 0 0 3px;
+  font-size: 0.9rem;
+  padding-left: 20px;
+}
+
+.search input:focus {
+  outline: 0;
+  background: transparent;
+}
+
+.search button {
+  position: relative;
+  float: right;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  height: 34px;
+  width: 93px;
+  color: #fff;
+  background-color: var(--red-color);
+  border-radius: 19px 19px 19px 19px;
+  margin: 3px 4px 0 0;
+  padding-top: 1px;
+}
+
+.search button:active {
+  box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);
+}
+
+.search button:focus {
+  outline: 0;
+}
+
+/* Top Mentors Component */
+.top-rated-mentors {
+  position: relative;
+  margin-bottom: 50px;
+  top: 85px;
+}
+
+.carousel-ct {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+}
+
+/* Profile Card (All) */
+.p-card {
+  margin: 30px;
+  width: 325px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+  padding-bottom: 15px;
+}
+
+.p-card .head {
+  background-color: var(--lightblue-color);
+}
+.p-card .head:after,
+.p-card .head:before,
+.p-card .content:after,
+.p-card .content:before {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.p-card .head h3 {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.p-card .content {
+  display: flex;
+  padding: 10px;
+}
+
+.p-card .img-ct {
+  width: 40%;
+}
+
+.p-card .lang-ct {
+  display: block;
+  width: 60%;
+}
+
+.pLang,
+.sLang {
+  margin-bottom: 15px;
+  line-height: 15px;
+  padding: 5px;
+  text-align: center;
+  font-size: 0.7rem;
+  color: #999;
+}
+
+.pLang li,
+.sLang li {
+  display: inline-block;
+  height: 14px;
+  font-size: 0.7rem;
+  padding: 0 3px;
+  border-right: 1px solid rgb(202, 199, 199);
+}
+
+.pLang li:last-child,
+.sLang li:last-child {
+  border: none;
+}
+
+.pSummary {
+  padding: 13px;
+  font-size: 0.7rem;
+  color: #202020;
+}
+
+.request-btn a {
+  padding: 4px 16px 3px;
+  font-size: 0.8rem;
 }
 
 /* Landing Page */
@@ -362,7 +517,7 @@ button {
 }
 
 .landing-inner {
-  color: #fff;
+  color: var(--dark-color);
   height: 100%;
   width: 100%;
   margin: auto;
@@ -371,6 +526,21 @@ button {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.ctaRegister .lead {
+  margin-top: 15px;
+  color: var(--dark-color);
+}
+
+.cta-btn {
+  margin: 2rem 0;
+}
+
+.ctaRegister p {
+  margin: 0 auto;
+  width: 80%;
+  color: var(--dark-color);
 }
 
 /* Profiles Page */
@@ -535,11 +705,12 @@ button {
     font-size: 1rem;
   }
 
-  /* Navbar */
+  /* Navigation component */
   .navbar {
     display: block;
+    position: relative;
     text-align: center;
-    height: 270px;
+    height: auto;
   }
 
   .navbar ul {
@@ -575,8 +746,23 @@ button {
     height: 100%;
   }
 
+  /* Search Component */
+  .search {
+    margin: 0 auto;
+    width: 90%;
+    height: 40px;
+    background: #fff;
+    border-radius: 21px;
+    box-shadow: 3px 5px 12px #51585b;
+  }
+
+  .search button {
+    margin-top: -36px;
+  }
+
+  /* Landing Page */
   .landing {
-    top: 270px;
+    top: 0;
   }
 
   /* Profiles Page */
