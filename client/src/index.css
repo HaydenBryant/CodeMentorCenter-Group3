@@ -452,10 +452,12 @@ button {
   width: 325px;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
   padding-bottom: 15px;
+  border-radius: 6px 6px 6px 6px;
 }
 
 .p-card .head {
   background-color: var(--lightblue-color);
+  border-radius: 6px 6px 0 0;
 }
 .p-card .head:after,
 .p-card .head:before,
