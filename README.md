@@ -29,3 +29,5 @@ The world's FREE coding and software development mentorship program. Also, one o
 |  0.5.0  | 06-25-19 | Enable middleware static directory in server.js             | KP          |
 |  0.5.1  | 06-25-19 | Added Mentees.js to component                               | KP          |
 |  0.5.2  | 06-25-19 | Added Mentors.js to component                               | KP          |
+|  0.6.0  | 06-26-19 | Built profile card component w/ front-end styling           | SB          |
+|  0.6.1  | 06-26-19 | Added 'Top Mentor' section within the landing page          | SB          |

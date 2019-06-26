@@ -17,6 +17,7 @@ code {
 :root {
   --primary-color: #3b8beb;
   --red-color: #b23850;
+  --lightblue-color: #c4dbf6;
   --dark-color: #343a40;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
@@ -304,6 +305,10 @@ button {
   background: var(--light-color);
 }
 
+.landing h4 {
+  font-size: 1.4rem;
+}
+
 /* Top Navigation Component */
 .navbar {
   display: flex;
@@ -377,9 +382,9 @@ button {
 
 .search input {
   width: 370px;
-  padding: 10px 5px;
+  padding: 11px 5px;
   float: left;
-  color: #ccc;
+  color: #999;
   border: 0;
   background: transparent;
   border-radius: 3px 0 0 3px;
@@ -401,10 +406,10 @@ button {
   height: 34px;
   width: 93px;
   color: #fff;
-  background-color: #b23850;
-  border-left: 1px solid #b23850;
+  background-color: var(--red-color);
   border-radius: 19px 19px 19px 19px;
   margin: 3px 4px 0 0;
+  padding-top: 1px;
 }
 
 .search button:active {
@@ -413,6 +418,96 @@ button {
 
 .search button:focus {
   outline: 0;
+}
+
+/* Top Mentors Component */
+.top-rated-mentors {
+  position: relative;
+  margin-bottom: 50px;
+  top: 85px;
+}
+
+.carousel-ct {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+}
+
+/* Profile Card (All) */
+.p-card {
+  margin: 30px;
+  width: 325px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+  padding-bottom: 15px;
+}
+
+.p-card .head {
+  background-color: var(--lightblue-color);
+}
+.p-card .head:after,
+.p-card .head:before,
+.p-card .content:after,
+.p-card .content:before {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.p-card .head h3 {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.p-card .content {
+  display: flex;
+  padding: 10px;
+}
+
+.p-card .img-ct {
+  width: 40%;
+}
+
+.p-card .lang-ct {
+  display: block;
+  width: 60%;
+}
+
+.pLang,
+.sLang {
+  margin-bottom: 15px;
+  line-height: 15px;
+  padding: 5px;
+  text-align: center;
+  font-size: 0.7rem;
+  color: #999;
+}
+
+.pLang li,
+.sLang li {
+  display: inline-block;
+  height: 14px;
+  font-size: 0.7rem;
+  padding: 0 3px;
+  border-right: 1px solid rgb(202, 199, 199);
+}
+
+.pLang li:last-child,
+.sLang li:last-child {
+  border: none;
+}
+
+.pSummary {
+  padding: 13px;
+  font-size: 0.7rem;
+  color: #202020;
+}
+
+.request-btn a {
+  padding: 4px 16px 3px;
+  font-size: 0.8rem;
 }
 
 /* Landing Page */
@@ -434,7 +529,6 @@ button {
 }
 
 .ctaRegister .lead {
-  font-size: 1.5rem;
   margin-top: 15px;
   color: var(--dark-color);
 }
@@ -611,7 +705,7 @@ button {
     font-size: 1rem;
   }
 
-  /* Navigation compondent */
+  /* Navigation component */
   .navbar {
     display: block;
     position: relative;
@@ -652,7 +746,7 @@ button {
     height: 100%;
   }
 
-  /* Search Compondent */
+  /* Search Component */
   .search {
     margin: 0 auto;
     width: 90%;
@@ -663,13 +757,14 @@ button {
   }
 
   .search button {
-    margin-top: -34px;
+    margin-top: -36px;
   }
 
   /* Landing Page */
   .landing {
     top: 0;
   }
+
   /* Profiles Page */
   .profile {
     grid-template-columns: 1fr;
