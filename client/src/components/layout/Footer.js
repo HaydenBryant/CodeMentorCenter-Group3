@@ -7,8 +7,8 @@ const Footer = () => {
         <div className='social-ct'>
             <h4>Follow Us</h4>
           <ul>
-            <li><a href="#" className="fa fa-facebook"> Facebook</a></li>
-            <li><a href="#" className="fa fa-twitter"> Twitter</a></li>
+            <li><a href="http://wwww.facebook.com" className="fa fa-facebook"> Facebook</a></li>
+            <li><a href="http://www.twitter.com" className="fa fa-twitter"> Twitter</a></li>
           </ul>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
