@@ -11,7 +11,7 @@ const ProfileCard = () => {
         </header>
         <div className='content'>
           <div className='img-ct'>
-            <img src={profileImg} alt='Profile Image' />
+            <img src={profileImg} alt='Profile' />
             <img src={star0} alt='Star Rating' />
           </div>
           <div className='lang-ct'>
@@ -43,7 +43,7 @@ const ProfileCard = () => {
           </p>
         </div>
         <div className='request-btn'>
-          <a href='!#' className='btn btn-primary btn-rounded'>
+          <a href='http://www.google.com' className='btn btn-primary btn-rounded'>
             REQUEST MENTORSHIP
           </a>
         </div>
