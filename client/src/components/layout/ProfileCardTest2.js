@@ -41,7 +41,7 @@ const ProfileCardTest2 = () => {
           </p>
         </div>
         <div className='request-btn'>
-          <a href='http://www.google.com' className='btn btn-primary btn-rounded'>
+          <a href="mailto:someone@yoursite.com?subject=Mail from Our Site" className='btn btn-primary btn-rounded'>
             REQUEST MENTORSHIP
           </a>
         </div>
