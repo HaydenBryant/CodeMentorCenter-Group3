@@ -5,8 +5,7 @@ class EditProfile extends Component {
         super(props);
         this.state = {
             handle: "",
-            isAMentor: "",
-            isAMentee: "",
+            userType:"",
             // photo: "",     //not sure how we will choose to handle
             dob: "",
             company: "",   //add school option?
@@ -18,14 +17,12 @@ class EditProfile extends Component {
             speakingLanguages: "",
             bio: "",
             githubUsername: "",
-            cmcLink: "",
-            social: {
-                youtube: "",
-                twitter: "",
-                facebook: "",
-                linkedin: "",
-                instagram: ""
-            },
+            resume: "",
+            youtube: "",
+            twitter: "",
+            facebook: "",
+            linkedin: "",
+            instagram: "",
             date: "",
             errors: {}
         };
@@ -38,8 +35,7 @@ class EditProfile extends Component {
         e.preventDefault();
         const userData = {
             handle: this.state.handle,
-            isAMentor: this.state.isAMentor,
-            isAMentee: this.state.isAMentee,
+            userType: this.state.userType,
             // photo: this.state.photo,
             dob: this.state.dob,
             company: this.state.company,
@@ -51,17 +47,22 @@ class EditProfile extends Component {
             speakingLanguages: this.state.speakingLanguages,
             bio: this.state.bio,
             githubUsername: this.state.githubUsername,
-            cmcLink: this.state.cmcLink,
-            youtube: this.state.social.youtube,
-            twitter: this.state.social.twitter,
-            facebook: this.state.social.facebook,
-            linkedin: this.state.social.linkedin,
-            instagram: this.state.social.instagram,
+            resume: this.state.resume,
+            youtube: this.state.youtube,
+            twitter: this.state.twitter,
+            facebook: this.state.facebook,
+            linkedin: this.state.linkedin,
+            instagram: this.state.instagram,
         }
 
         // this.props.EditProfile(userData, this.props.history);
         console.log(this.state);
     }
+
+    // onSubmitCheckbox(e){
+    //     e.preventDefault();
+
+    // }
 
     onChange(e) {
         this.setState({ [e.target.name]: e.target.value });
@@ -88,33 +89,42 @@ class EditProfile extends Component {
                                 required
                             /> <br />
                             <input
-                                type='checkbox'
-                                name="Mentor"
-                                value={this.state.isAMentor}
+                                type='radio'
+                                checked={this.state.userType === "mentor"}
+                                name="userType"
+                                value="mentor"
                                 onChange={this.onChange}
                             />
                             <label htmlFor="Mentor"> Would you like to be a mentor?</label>
                             <br />
                             <input
-                                type='checkbox'
-                                name="Mentee"
-                                value={this.state.isAMentee}
+                                type='radio'
+                                name="userType"
+                                checked={this.state.userType === "mentee"}
+                                value="mentee"
                                 onChange={this.onChange}
                             />
                             <label htmlFor="Mentee"> Would you like to be a mentee?</label>
                             <br />
-
-                            {/* Warning: A component is changing an uncontrolled input of type date to be controlled. Input elements should not switch from uncontrolled to controlled (or vice versa). Decide between using a controlled or uncontrolled input element for the lifetime of the component. More info: https://fb.me/react-controlled-components */}
+                            <input
+                                type='radio'
+                                name="userType"
+                                checked={this.state.userType === "both"}
+                                value="both"
+                                onChange={this.onChange}
+                            />
+                            <label htmlFor="Mentee"> Would you like to be a mentor and mentee?</label>
+                            <br />
 
                             <input
                                 type='date'
                                 placeholder="* Date of Birth"
-                                name="DOB"
-                                value={this.state.DOB}
+                                name="dob"
+                                value={this.state.dob}
                                 onChange={this.onChange}
                                 required
-                            /> 
-                            <label htmlFor="DOB"> What is your date of birth?</label>
+                            />
+                            <label htmlFor="dob"> What is your date of birth?</label>
                             <br />
                             <input
                                 type='text'
@@ -163,7 +173,7 @@ class EditProfile extends Component {
                             /> <br />
                             <input
                                 type='text'
-                                placeholder="SPeaking Languages"
+                                placeholder="Speaking Languages"
                                 name="speakingLanguages"
                                 value={this.state.speakingLanguages}
                                 onChange={this.onChange}
@@ -184,10 +194,10 @@ class EditProfile extends Component {
                                 onChange={this.onChange}
                             /> <br />
                             <input
-                                type='text'
-                                placeholder="CMC Link"
-                                name="cmcLink"
-                                value={this.state.cmcLink}
+                                type='url'
+                                placeholder="Resume Link"
+                                name="resume"
+                                value={this.state.resume}
                                 onChange={this.onChange}
                             /> <br />
 
@@ -197,47 +207,37 @@ class EditProfile extends Component {
                                 type='text'
                                 placeholder="Youtube Handle"
                                 name="youtube"
-                                value={this.state.social.youtube}
+                                value={this.state.youtube}
                                 onChange={this.onChange}
                             /> <br />
                             <input
                                 type='text'
                                 placeholder="Twitter Handle"
                                 name="twitter"
-                                value={this.state.social.twitter}
+                                value={this.state.twitter}
                                 onChange={this.onChange}
                             /> <br />
                             <input
                                 type='url'
-                                placeholder="Facebook URL"
-                                name="Facebook"
-                                value={this.state.social.facebook}
+                                placeholder="facebook URL"
+                                name="facebook"
+                                value={this.state.facebook}
                                 onChange={this.onChange}
                             /> <br />
                             <input
                                 type='url'
                                 placeholder="Linkedin URL"
                                 name="linkedin"
-                                value={this.state.social.linkedin}
+                                value={this.state.linkedin}
                                 onChange={this.onChange}
                             /> <br />
                             <input
                                 type='text'
                                 placeholder="Instagram Handle"
                                 name="instagram"
-                                value={this.state.social.instagram}
+                                value={this.state.instagram}
                                 onChange={this.onChange}
                             /> <br />
-                            
-                            {/* will be hidden and captured by default. Need to work on how. */}
-                            <input
-                                type='date'
-                                placeholder="Date"
-                                name="date"
-                                value={this.state.date}
-                                onChange={this.onChange}
-                                />
-                                <label htmlFor="date"> Todays Date</label> <br />
 
                             <input
                                 type="submit"
