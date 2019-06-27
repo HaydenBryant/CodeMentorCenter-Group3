@@ -11,8 +11,8 @@ const ProfileCard = () => {
         </header>
         <div className='content'>
           <div className='img-ct'>
-            <src={profileImg} alt='Profile Image' />
-            <src={star0} alt='Star Rating' />
+            <img src={profileImg} alt='Profile' />
+            <img src={star0} alt='Star Rating' />
           </div>
           <div className='lang-ct'>
             <h5>Programming Languages</h5>
