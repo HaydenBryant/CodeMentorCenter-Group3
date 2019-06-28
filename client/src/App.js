@@ -38,20 +38,22 @@ if (localStorage.jwtToken) {
 class App extends Component {
 	render() {
 		return (
-			<Router>
-				<Fragment>
-					<Navbar />
-					<Route exact path="/" component={Landing} />
-					<section className="container">
-						<Switch>
-							<Route exact path="/mentors" component={Mentors} />
-							<Route exact path="/mentees" component={Mentees} />
-							<Route exact path="/register" component={Register} />
-							<Route exact path="/login" component={Login} />
-						</Switch>
-					</section>
-				</Fragment>
-			</Router>
+			<Provider store={store}>
+				<Router>
+					<Fragment>
+						<Navbar />
+						<Route exact path="/" component={Landing} />
+						<section className="container">
+							<Switch>
+								<Route exact path="/mentors" component={Mentors} />
+								<Route exact path="/mentees" component={Mentees} />
+								<Route exact path="/register" component={Register} />
+								<Route exact path="/login" component={Login} />
+							</Switch>
+						</section>
+					</Fragment>
+				</Router>
+			</Provider>
 		);
 	}
 }
