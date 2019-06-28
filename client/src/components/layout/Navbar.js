@@ -23,6 +23,9 @@ const Navbar = () => {
         <li>
           <Link to='/register'>SIGN UP</Link>
         </li>
+        <li>
+          <Link to='/editProfile'>EDIT</Link>
+        </li>
       </ul>
     </nav>
   );

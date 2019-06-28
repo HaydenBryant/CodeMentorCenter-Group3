@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import StateDropdown from "./StateDropdown";
+
 class EditProfile extends Component {
     constructor(props) {
         super(props);
@@ -58,11 +60,6 @@ class EditProfile extends Component {
         // this.props.EditProfile(userData, this.props.history);
         console.log(this.state);
     }
-
-    // onSubmitCheckbox(e){
-    //     e.preventDefault();
-
-    // }
 
     onChange(e) {
         this.setState({ [e.target.name]: e.target.value });
@@ -140,13 +137,20 @@ class EditProfile extends Component {
                                 value={this.state.website}
                                 onChange={this.onChange}
                             /> <br />
-                            <input
+                            {/* <input
                                 type='location'
                                 placeholder="Location"
                                 name="location"
                                 value={this.state.location}
                                 onChange={this.onChange}
-                            /> <br />
+                            /> <br /> */}
+                            {/* create seperate component for state StateDropdown */}
+                            {/* <select>
+                                <option value="grapefruit">Grapefruit</option>
+                                <option value="lime">Lime</option>
+                                <option selected value="coconut">Coconut</option>
+                                <option value="mango">Mango</option>
+                            </select> */}
                             <input
                                 type='text'
                                 placeholder="* Coding Languages"
