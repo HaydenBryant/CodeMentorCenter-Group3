@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import careerdevs_couple from '../../images/cd_higher_learning.jpg';
+import careerdevsImg from '../../images/cd_higher_learning.jpg';
 
 const OnlineLearning = () => {
   return (
@@ -7,7 +7,7 @@ const OnlineLearning = () => {
       <div className='higherLearning'>
         <div className='ad-img'>
           <img
-            src={careerdevs_couple}
+            src={careerdevsImg}
             alt='CareerDevs Computer Science University'
           />
         </div>
