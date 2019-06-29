@@ -1,22 +1,22 @@
-import React, { Fragment } from 'react';
-import profileImg from '../../images/p_card_default_img.gif';
-import star5 from '../../images/star_rating_5.gif';
+import React, { Fragment } from "react";
+import profileImg from "../../images/p_card_default_img.gif";
+import star5 from "../../images/star_rating_5.gif";
 
 const ProfileCardTest2 = () => {
   return (
     <Fragment>
-      <div className='p-card'>
-        <header className='head'>
+      <div className="p-card">
+        <header className="head">
           <h3>Mike Willams</h3>
         </header>
-        <div className='content'>
-          <div className='img-ct'>
-            <img src={profileImg} alt='Profile' />
-            <img src={star5} alt='Star Rating' />
+        <div className="content">
+          <div className="img-ct">
+            <img src={profileImg} alt="Profile" />
+            <img src={star5} alt="Star Rating" />
           </div>
-          <div className='lang-ct'>
+          <div className="lang-ct">
             <h5>Programming Languages</h5>
-            <ul className='pLang'>
+            <ul className="pLang">
               <li>JavaScript</li>
               <li>C#</li>
               <li>Python</li>
@@ -25,14 +25,20 @@ const ProfileCardTest2 = () => {
               <li>PHP</li>
             </ul>
             <h5>Speaking Languages</h5>
-            <ul className='sLang'>
+            <ul className="sLang">
               <li>English</li>
               <li>Spanish</li>
             </ul>
           </div>
         </div>
+        <div className="mentorSummary">
+          <ul>
+            <li>Total mentored: 0</li>
+            <li>Currently mentoring: 0/4</li>
+          </ul>
+        </div>
         <hr />
-        <div className='pSummary'>
+        <div className="pSummary">
           <p>
             Long established fact that a reader will be distracted by the
             readable content of a page when looking at its layout. The point of
@@ -40,8 +46,11 @@ const ProfileCardTest2 = () => {
             of letters, as opposed to using
           </p>
         </div>
-        <div className='request-btn'>
-          <a href="mailto:someone@yoursite.com?subject=Mail from Our Site" className='btn btn-primary btn-rounded'>
+        <div className="request-btn">
+          <a
+            href="mailto:someone@yoursite.com?subject=Mail from Our Site"
+            className="btn btn-primary btn-rounded"
+          >
             REQUEST MENTORSHIP
           </a>
         </div>
