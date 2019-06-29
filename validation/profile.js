@@ -5,7 +5,6 @@ module.exports = function validateProfileInput(data) {
 	let errors = {};
 
 	data.handle = !isEmpty(data.handle) ? data.handle : "";
-	data.status = !isEmpty(data.status) ? data.status : "";
 	data.skills = !isEmpty(data.skills) ? data.skills : "";
 	data.cmcLink = !isEmpty(data.cmcLink) ? data.cmcLink : "";
 	data.speakingLanguages = !isEmpty(data.speakingLanguages)
@@ -25,12 +24,28 @@ module.exports = function validateProfileInput(data) {
 		errors.handle = "Profile handle is required";
 	}
 
-	if (Validator.isEmpty(data.status)) {
-		errors.status = "Status field is required";
-	}
-
 	if (Validator.isEmpty(data.skills)) {
 		errors.skills = "Skills field is required";
+	}
+
+	if (Validator.isEmpty(data.skillLevel)) {
+		errors.skillLevel = "Skill level is required";
+	}
+
+	if (Validator.isEmpty(data.cmcLink)) {
+		errors.cmcLink = "CMC Link is required";
+	}
+
+	if (Validator.isEmpty(data.speakingLanguages)) {
+		errors.speakingLanguages = "At lease one language is required";
+	}
+
+	if (Validator.isEmpty(data.frameworks)) {
+		errors.frameworks = "At lease one framework is required";
+	}
+
+	if (Validator.isEmpty(data.codingLanguages)) {
+		errors.codingLanguages = "At lease one coding language is required";
 	}
 
 	if (!isEmpty(data.website)) {
