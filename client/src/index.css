@@ -300,6 +300,10 @@ button {
   top: 85px;
 }
 
+section.container {
+  padding: 20px;
+}
+
 .landing h4 {
   font-size: 1.4rem;
 }
