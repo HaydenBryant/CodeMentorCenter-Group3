@@ -1,86 +1,128 @@
-import React, { Fragment, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Fragment, useState, Component } from "react";
+import { Link } from "react-router-dom";
 
-const Register = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    password: '',
-    password2: ''
-  });
+import PropTypes from "prop-types";
+import { withRouter } from "react-router-dom";
+import { connect } from "react-redux";
+import { registerUser } from "../../actions/authActions";
 
-  const { name, email, password, password2 } = formData;
+class Register extends Component {
+	constructor() {
+		super();
+		this.state = {
+			name: "",
+			email: "",
+			password: "",
+			password2: "",
+			errors: {}
+		};
+	}
 
-  const onChange = e =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+	componentDidMount() {
+		if (this.props.auth.isAuthenticated) {
+			this.props.history.push("/dashboard");
+		}
+	}
 
-  const onSubmit = async e => {
-    e.preventDefault();
-    if (password !== password2) {
-      console.log('Passwords do not match');
-    } else {
-      console.log('SUCCESS');
-    }
-  };
+	componentWillReceiveProps(nextProps) {
+		if (nextProps.errors) {
+			this.setState({ errors: nextProps.errors });
+		}
+	}
 
-  return (
-    <Fragment>
-      <h1 className='large text-primary'>Sign Up</h1>
-      <p className='lead'>
-        <i className='fas fa-user' /> Create Your Account
-      </p>
-      <form className='form' onSubmit={e => onSubmit(e)}>
-        <div className='form-group'>
-          <input
-            type='text'
-            placeholder='Name'
-            name='name'
-            value={name}
-            onChange={e => onChange(e)}
-            required
-          />
-        </div>
-        <div className='form-group'>
-          <input
-            type='email'
-            placeholder='Email Address'
-            name='email'
-            value={email}
-            onChange={e => onChange(e)}
-            required
-          />
-          <small className='form-text'>
-            This site uses Gravatar so if you want a profile image, use a
-            Gravatar email
-          </small>
-        </div>
-        <div className='form-group'>
-          <input
-            type='password'
-            placeholder='Password'
-            name='password'
-            value={password}
-            onChange={e => onChange(e)}
-            minLength='6'
-          />
-        </div>
-        <div className='form-group'>
-          <input
-            type='password'
-            placeholder='Confirm Password'
-            name='password2'
-            value={password2}
-            onChange={e => onChange(e)}
-            minLength='6'
-          />
-        </div>
-        <input type='submit' className='btn btn-primary' value='Register' />
-      </form>
-      <p className='my-1'>
-        Already have an account? <Link to='/login'>Sign In</Link>
-      </p>
-    </Fragment>
-  );
+	onChange = e => {
+		this.setState({ [e.target.name]: e.target.value });
+	};
+
+	onSubmit = e => {
+		e.preventDefault();
+
+		const newUser = {
+			name: this.state.name,
+			email: this.state.email,
+			password: this.state.password,
+			password2: this.state.password2
+		};
+
+		this.props.registerUser(newUser, this.props.history);
+	};
+
+	render() {
+		const { errors, name, email, password, password2 } = this.state;
+
+		return (
+			<Fragment>
+				<h1 className="large text-primary">Sign Up</h1>
+				<p className="lead">
+					<i className="fas fa-user" /> Create Your Account
+				</p>
+				<form className="form" onSubmit={e => this.onSubmit(e)}>
+					<div className="form-group">
+						<input
+							type="text"
+							placeholder="Name"
+							name="name"
+							value={name}
+							onChange={e => this.onChange(e)}
+							required
+						/>
+					</div>
+					<div className="form-group">
+						<input
+							type="email"
+							placeholder="Email Address"
+							name="email"
+							value={email}
+							onChange={e => this.onChange(e)}
+							required
+						/>
+						<small className="form-text">
+							This site uses Gravatar so if you want a profile image, use a
+							Gravatar email
+						</small>
+					</div>
+					<div className="form-group">
+						<input
+							type="password"
+							placeholder="Password"
+							name="password"
+							value={password}
+							onChange={e => this.onChange(e)}
+							minLength="6"
+						/>
+					</div>
+					<div className="form-group">
+						<input
+							type="password"
+							placeholder="Confirm Password"
+							name="password2"
+							value={password2}
+							onChange={e => this.onChange(e)}
+							minLength="6"
+						/>
+					</div>
+					<input type="submit" className="btn btn-primary" value="Register" />
+				</form>
+				<p className="my-1">
+					Already have an account? <Link to="/login">Sign In</Link>
+				</p>
+			</Fragment>
+		);
+	}
+}
+
+Register.propTypes = {
+	registerUser: PropTypes.func.isRequired,
+	auth: PropTypes.object.isRequired,
+	errors: PropTypes.object.isRequired
 };
 
-export default Register;
+const mapStateToProps = state => ({
+	auth: state.auth,
+	errors: state.errors
+});
+
+export default connect(
+	mapStateToProps,
+	{ registerUser }
+)(withRouter(Register));
