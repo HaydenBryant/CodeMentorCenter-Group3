@@ -6,6 +6,8 @@ import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
 
+import TextFieldGroup from "../common/TextFieldGroup";
+
 class Register extends Component {
 	constructor() {
 		super();
@@ -56,14 +58,14 @@ class Register extends Component {
 				<p className="lead">
 					<i className="fas fa-user" /> Create Your Account
 				</p>
-				<form className="form" onSubmit={e => this.onSubmit(e)}>
+				<form className="form" onSubmit={this.onSubmit}>
 					<div className="form-group">
 						<input
 							type="text"
 							placeholder="Name"
 							name="name"
 							value={name}
-							onChange={e => this.onChange(e)}
+							onChange={this.onChange}
 							required
 						/>
 					</div>
@@ -73,7 +75,7 @@ class Register extends Component {
 							placeholder="Email Address"
 							name="email"
 							value={email}
-							onChange={e => this.onChange(e)}
+							onChange={this.onChange}
 							required
 						/>
 						<small className="form-text">
@@ -87,7 +89,7 @@ class Register extends Component {
 							placeholder="Password"
 							name="password"
 							value={password}
-							onChange={e => this.onChange(e)}
+							onChange={this.onChange}
 							minLength="6"
 						/>
 					</div>
@@ -97,7 +99,7 @@ class Register extends Component {
 							placeholder="Confirm Password"
 							name="password2"
 							value={password2}
-							onChange={e => this.onChange(e)}
+							onChange={this.onChange}
 							minLength="6"
 						/>
 					</div>
