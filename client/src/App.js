@@ -5,7 +5,7 @@ import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 
 import './index.css';
-import EditProfile from "./components/EditProfile";
+import CreateProfile from "./components/create-profile/CreateProfile"
 
 class App extends Component {
   render() {
@@ -20,7 +20,7 @@ class App extends Component {
               <Route exact path='/mentees' component={Mentees} />
               <Route exact path='/register' component={Register} />
               <Route exact path='/login' component={Login} />
-              <Route exact path='/editProfile' component={EditProfile} />
+              <Route exact path='/createProfile' component={CreateProfile} />
             </Switch>
           </section>
         </Fragment>

@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 
-import StateDropdown from "./StateDropdown";
 
-class EditProfile extends Component {
+class CreateProfile extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -11,10 +10,12 @@ class EditProfile extends Component {
             // photo: "",     //not sure how we will choose to handle
             dob: "",
             company: "",   //add school option?
+            school: "",
             website: "",
             town: "",
             state: "",
             zipCode: "",
+            country: "",
             codingLanguages: "",  //separated by ", " then .split
             frameworks: "",
             skillLevel: "",
@@ -47,6 +48,7 @@ class EditProfile extends Component {
             town: this.state.town,
             state: this.state.state,
             zipCode: this.state.zipCode,
+            country: this.state.country,
             codingLanguages: this.state.codingLanguages,
             frameworks: this.state.frameworks,
             skillLevel: this.state.skillLevel,
@@ -135,6 +137,13 @@ class EditProfile extends Component {
                                 onChange={this.onChange}
                             /> <br />
                             <input
+                                type='text'
+                                placeholder="school Name"
+                                name="school"
+                                value={this.state.school}
+                                onChange={this.onChange}
+                            /> <br />
+                            <input
                                 type='url'
                                 placeholder="Website URL"
                                 name="website"
@@ -142,6 +151,7 @@ class EditProfile extends Component {
                                 onChange={this.onChange}
                             /> <br />
 
+                            {/* create separate Component for state */}
                             <input
                                 type='text'
                                 placeholder="* Town"
@@ -149,7 +159,7 @@ class EditProfile extends Component {
                                 value={this.state.town}
                                 onChange={this.onChange}
                                 required
-                            /> <br />
+                            />
                             <input
                                 type='text'
                                 placeholder="* State"
@@ -163,6 +173,14 @@ class EditProfile extends Component {
                                 placeholder="* Zip Code"
                                 name="zipCode"
                                 value={this.state.zipCode}
+                                onChange={this.onChange}
+                                required
+                            />
+                            <input
+                                type='text'
+                                placeholder="* Country"
+                                name="country"
+                                value={this.state.country}
                                 onChange={this.onChange}
                                 required
                             /> <br />
@@ -273,4 +291,4 @@ class EditProfile extends Component {
     }
 }
 
-export default EditProfile;
+export default CreateProfile;
