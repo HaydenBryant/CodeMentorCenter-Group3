@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import StateDropdown from "./StateDropdown";
+import StateDropdown from "../StateDropdown";
 
 class EditProfile extends Component {
     constructor(props) {
