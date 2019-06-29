@@ -5,7 +5,6 @@ module.exports = function validateProfileInput(data) {
 	let errors = {};
 
 	data.handle = !isEmpty(data.handle) ? data.handle : "";
-	data.skills = !isEmpty(data.skills) ? data.skills : "";
 	data.cmcLink = !isEmpty(data.cmcLink) ? data.cmcLink : "";
 	data.speakingLanguages = !isEmpty(data.speakingLanguages)
 		? data.speakingLanguages
