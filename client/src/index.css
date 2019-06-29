@@ -1,14 +1,14 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -31,7 +31,7 @@ code {
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   background-color: #fff;
@@ -50,9 +50,6 @@ ul {
 img {
   width: 100%;
 }
-
-/* Utilities */
-
 
 /* Text Styles*/
 .x-large {
@@ -245,10 +242,10 @@ img {
   color: #888;
 }
 
-.form input[type='text'],
-.form input[type='email'],
-.form input[type='password'],
-.form input[type='date'],
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"],
+.form input[type="date"],
 .form select,
 .form textarea {
   display: block;
@@ -258,7 +255,7 @@ img {
   border: 1px solid #ccc;
 }
 
-.form input[type='submit'],
+.form input[type="submit"],
 button {
   font: inherit;
 }
@@ -299,9 +296,8 @@ button {
 }
 
 .container {
-      position: relative;
-    padding: 20px;
-    top: 85px;
+  position: relative;
+  top: 85px;
 }
 
 .landing h4 {
@@ -321,6 +317,7 @@ button {
   height: 85px;
   top: 0;
   border-bottom: solid 1px var(--dark-color);
+  background-color: #fff;
   opacity: 0.9;
 }
 
@@ -469,7 +466,7 @@ button {
 .p-card .head:before,
 .p-card .content:after,
 .p-card .content:before {
-  content: '';
+  content: "";
   display: table;
   clear: both;
 }
@@ -653,7 +650,7 @@ button {
 }
 
 .social-ct ul li:last-child {
-    padding-left: 15px;
+  padding-left: 15px;
 }
 
 .copyright {
@@ -676,10 +673,10 @@ button {
 .profile-grid {
   display: grid;
   grid-template-areas:
-    'top top'
-    'about about'
-    'exp edu'
-    'github github';
+    "top top"
+    "about about"
+    "exp edu"
+    "github github";
   grid-gap: 1rem;
 }
 
@@ -888,7 +885,7 @@ button {
     display: block;
     width: 100%;
   }
-  
+
   .ad-copy .btn {
     width: 90%;
   }
@@ -925,11 +922,11 @@ button {
 
   .profile-grid {
     grid-template-areas:
-      'top'
-      'about'
-      'exp'
-      'edu'
-      'github';
+      "top"
+      "about"
+      "exp"
+      "edu"
+      "github";
   }
 
   .profile-about .skills {
