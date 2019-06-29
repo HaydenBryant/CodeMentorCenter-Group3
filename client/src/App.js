@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Navbar, Landing, Mentors, Mentees } from "./components/layout";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
+import Dashboard from "./components/dashboard/Dashboard";
+import PrivateRoute from "./components/common/PrivateRoute";
+// import NotFound from "./components/not-found/NotFound";
 
 import "./index.css";
 
@@ -49,6 +52,9 @@ class App extends Component {
 								<Route exact path="/mentees" component={Mentees} />
 								<Route exact path="/register" component={Register} />
 								<Route exact path="/login" component={Login} />
+							</Switch>
+							<Switch>
+								<PrivateRoute exact path="/dashboard" component={Dashboard} />
 							</Switch>
 						</section>
 					</Fragment>

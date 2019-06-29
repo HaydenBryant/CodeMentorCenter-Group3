@@ -51,16 +51,6 @@ img {
   width: 100%;
 }
 
-/* Utilities */
-/* Utilities */
-.container {
-  max-width: 1100px;
-  margin: auto;
-  overflow: hidden;
-  padding: 0 2rem;
-  margin-top: 6rem;
-  margin-bottom: 3rem;
-}
 /* Text Styles*/
 .x-large {
   font-size: 4rem;
@@ -328,6 +318,7 @@ button {
   height: 85px;
   top: 0;
   border-bottom: solid 1px var(--dark-color);
+  background-color: #fff;
   opacity: 0.9;
 }
 
