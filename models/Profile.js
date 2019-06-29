@@ -26,16 +26,9 @@ const ProfileSchema = new Schema({
 		required: true,
 		max: 40
 	},
-	fname: {
-		type: String,
-		required: true
-	},
-	lname: {
-		type: String,
-		required: true
-	},
 	name: {
-		type: String
+		type: String,
+		required: true
 	},
 	dob: {
 		type: Date
