@@ -1,14 +1,14 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -31,7 +31,7 @@ code {
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   background-color: #fff;
@@ -52,8 +52,15 @@ img {
 }
 
 /* Utilities */
-
-
+/* Utilities */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+}
 /* Text Styles*/
 .x-large {
   font-size: 4rem;
@@ -245,10 +252,10 @@ img {
   color: #888;
 }
 
-.form input[type='text'],
-.form input[type='email'],
-.form input[type='password'],
-.form input[type='date'],
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"],
+.form input[type="date"],
 .form select,
 .form textarea {
   display: block;
@@ -258,7 +265,7 @@ img {
   border: 1px solid #ccc;
 }
 
-.form input[type='submit'],
+.form input[type="submit"],
 button {
   font: inherit;
 }
@@ -299,9 +306,9 @@ button {
 }
 
 .container {
-      position: relative;
-    padding: 20px;
-    top: 85px;
+  position: relative;
+  padding: 20px;
+  top: 85px;
 }
 
 .landing h4 {
@@ -469,7 +476,7 @@ button {
 .p-card .head:before,
 .p-card .content:after,
 .p-card .content:before {
-  content: '';
+  content: "";
   display: table;
   clear: both;
 }
@@ -482,7 +489,7 @@ button {
 
 .p-card .content {
   display: flex;
-  padding: 10px;
+  padding: 10px 10px 0 10px;
 }
 
 .p-card .img-ct {
@@ -520,6 +527,26 @@ button {
 .pLang li:last-child,
 .sLang li:last-child {
   border: none;
+}
+
+.mentorSummary ul,
+.menteeSummary ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 15px;
+}
+
+.mentorSummary ul li,
+.menteeSummary ul li {
+  display: inline;
+  font-size: 0.7rem;
+  color: #999;
+}
+
+.mentorSummary ul li:first-child,
+.menteeSummary ul li:first-child {
+  padding-right: 20px;
 }
 
 .pSummary {
@@ -653,7 +680,7 @@ button {
 }
 
 .social-ct ul li:last-child {
-    padding-left: 15px;
+  padding-left: 15px;
 }
 
 .copyright {
@@ -676,10 +703,10 @@ button {
 .profile-grid {
   display: grid;
   grid-template-areas:
-    'top top'
-    'about about'
-    'exp edu'
-    'github github';
+    "top top"
+    "about about"
+    "exp edu"
+    "github github";
   grid-gap: 1rem;
 }
 
@@ -804,6 +831,7 @@ button {
 @media (max-width: 700px) {
   .container {
     top: 0;
+    min-width: 375px;
   }
 
   .hide-sm {
@@ -888,7 +916,7 @@ button {
     display: block;
     width: 100%;
   }
-  
+
   .ad-copy .btn {
     width: 90%;
   }
@@ -925,11 +953,11 @@ button {
 
   .profile-grid {
     grid-template-areas:
-      'top'
-      'about'
-      'exp'
-      'edu'
-      'github';
+      "top"
+      "about"
+      "exp"
+      "edu"
+      "github";
   }
 
   .profile-about .skills {
