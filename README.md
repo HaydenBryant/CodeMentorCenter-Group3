@@ -35,3 +35,4 @@ The world's FREE coding and software development mentorship program. Also, one o
 |  0.6.3  | 06-26-19 | Added 'Mentor' section within the landing page & styling         | SB          |
 |  0.6.4  | 06-26-19 | Added 'Mentee' section within the landing page & styling          | SB          |
 |  0.6.5  | 06-26-19 | Added Footer section w/ front-end styling          | SB          |
+|  0.6.6  | 06-29-19 | Added user register and login                              | RS          |
