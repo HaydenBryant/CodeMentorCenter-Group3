@@ -130,8 +130,15 @@ router.post("/login", (req, res) => {
 // @route   GET api/users/search:language
 // @desc    Search programming language within users
 // @access  Public
-router.get("/search/:language", function(req, res) {
-  res.json({ msg: "Programming language api search is working..." });
+// router.get("/search/:language", function(req, res) {
+//   res.json({ msg: "Programming language api search is working..." });
+// });
+router.get("/search/:name", function(req, res) {
+  const name = req.params.name;
+  User.find({ name: name }).then(results => {
+    console.log(results);
+    res.send(results);
+  });
 });
 
 module.exports = router;
