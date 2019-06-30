@@ -8,7 +8,7 @@ const About = () => {
         <div className="dark-overlay">
           <div className="landing-inner about">
             <h1>About Us</h1>
-            <div class="meet">
+            <div className="meet">
               <h2>Meet The Team</h2>
               <p>
                 {" "}
@@ -21,42 +21,42 @@ const About = () => {
               </p>
             </div>
 
-            <div class="row">
-              <div class="column">
-                <div class="person1">
-                  <span class="dot" />
+            <div className="row">
+              <div className="column">
+                <div className="person1">
+                  <span className="dot" />
                   <h2>Hayden Bryant</h2>
                   <p>Scrum Master</p>{" "}
                 </div>
               </div>
 
-              <div class="column">
-                <div class="person2">
-                  <span class="dot" />
+              <div className="column">
+                <div className="person2">
+                  <span className="dot" />
                   <h2>Ryan Silva</h2>
                   <p>Developer</p>
                 </div>
               </div>
 
-              <div class="column">
-                <div class="person3">
-                  <span class="dot" />
+              <div className="column">
+                <div className="person3">
+                  <span className="dot" />
                   <h2>Steve Barriere</h2>
                   <p>Developer</p>
                 </div>
               </div>
 
-              <div class="column">
-                <div class="person4">
-                  <span class="dot" />
+              <div className="column">
+                <div className="person4">
+                  <span className="dot" />
                   <h2>Hector Domingue</h2>
                   <p>Developer</p>
                 </div>
               </div>
 
-              <div class="column">
-                <div class="person5">
-                  <span class="dot" />
+              <div className="column">
+                <div className="person5">
+                  <span className="dot" />
                   <h2>Khammy Phasouvor</h2>
                   <p>QA</p>
                 </div>
