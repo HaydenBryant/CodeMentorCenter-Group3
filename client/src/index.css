@@ -621,6 +621,69 @@ section.container {
   background-color: var(--red-color);
 }
 
+/* About Us Page */
+.about {
+  text-align: center;
+  background-color: rgb(104, 137, 141);
+}
+.about h1 {
+  font-size: 50px;
+  color: white;
+}
+.about h2 {
+  color: white;
+}
+.about p {
+  color: white;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 25px 0;
+}
+
+.about .meet {
+  color: white;
+  padding: 10px;
+}
+
+.about .person1,
+.about .person2,
+.about .person3,
+.about .person4,
+.about .person5 {
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  border: 5px solid gray;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about .column {
+  float: center;
+  width: 33.33%;
+  padding: 5px;
+}
+
+.about .row {
+  justify-content: center;
+  clear: both;
+  display: table;
+}
+
+.about .dot {
+  margin-bottom: 30px;
+  height: 100px;
+  width: 100px;
+  border: 5px solid white;
+  border-radius: 50%;
+}
+
 /* Footer Conainer  */
 .footer-ct {
   position: relative;
