@@ -32,7 +32,7 @@ class Navbar extends Component {
 						<Link to="/mentees">MENTEES</Link>
 					</li>
 					<li>
-						<Link to="/editProfile">EDIT PROFILE</Link>
+						<Link to="/createProfile">CREATE PROFILE</Link>
 					</li>
 
 					<li>

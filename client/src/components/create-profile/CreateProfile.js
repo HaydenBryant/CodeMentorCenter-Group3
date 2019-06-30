@@ -73,7 +73,7 @@ class CreateProfile extends Component {
             instagram: this.state.instagram,
         }
 
-        this.props.EditProfile(userData, this.props.history);
+        this.props.CreateProfile(userData, this.props.history);
         // console.log(this.state);
     }
 
@@ -86,7 +86,7 @@ class CreateProfile extends Component {
         // const { errors } = this.state;
 
         return (
-            <div className="editProfile">
+            <div className="createProfile">
                 <div className="container">
                     <div className="row">
                         <h1 className="intro">Create your profile here</h1>
@@ -227,6 +227,7 @@ class CreateProfile extends Component {
                                 name="speakingLanguages"
                                 value={this.state.speakingLanguages}
                                 onChange={this.onChange}
+                                info="Please separate each language with a ,"
                                 required
                             /> <br />
                             <input

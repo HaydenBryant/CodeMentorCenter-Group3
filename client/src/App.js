@@ -7,6 +7,8 @@ import Dashboard from "./components/dashboard/Dashboard";
 import PrivateRoute from "./components/common/PrivateRoute";
 // import NotFound from "./components/not-found/NotFound";
 
+import CreateProfile from "./components/create-profile/CreateProfile"
+
 import "./index.css";
 
 import { Provider } from "react-redux";
@@ -52,6 +54,7 @@ class App extends Component {
 								<Route exact path="/mentees" component={Mentees} />
 								<Route exact path="/register" component={Register} />
 								<Route exact path="/login" component={Login} />
+								<Route exact path="/createProfile" component={CreateProfile} />
 							</Switch>
 							<Switch>
 								<PrivateRoute exact path="/dashboard" component={Dashboard} />
