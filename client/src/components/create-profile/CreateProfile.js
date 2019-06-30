@@ -1,4 +1,8 @@
 import React, { Component } from "react";
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { createProfile } from '../../actions/profileActions';
 
 
 class CreateProfile extends Component {
@@ -36,6 +40,12 @@ class CreateProfile extends Component {
         this.onSubmit = this.onSubmit.bind(this);
     }
 
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.errors) {
+          this.setState({ errors: nextProps.errors });
+        }
+      }
+
     onSubmit(e) {
         e.preventDefault();
         const userData = {
@@ -63,8 +73,8 @@ class CreateProfile extends Component {
             instagram: this.state.instagram,
         }
 
-        // this.props.EditProfile(userData, this.props.history);
-        console.log(this.state);
+        this.props.EditProfile(userData, this.props.history);
+        // console.log(this.state);
     }
 
     onChange(e) {
@@ -169,7 +179,7 @@ class CreateProfile extends Component {
                                 required
                             /> <br />
                             <input
-                                type='text'
+                                type='number'
                                 placeholder="* Zip Code"
                                 name="zipCode"
                                 value={this.state.zipCode}
@@ -192,6 +202,7 @@ class CreateProfile extends Component {
                                 name="codingLanguages"
                                 value={this.state.codingLanguages}
                                 onChange={this.onChange}
+                                info="Please separate each language with a ,"
                                 required
                             /> <br />
                             <input
@@ -291,4 +302,14 @@ class CreateProfile extends Component {
     }
 }
 
-export default CreateProfile;
+CreateProfile.propTypes = {
+    profile: PropTypes.object.isRequired,
+    errors: PropTypes.object.isRequired
+  };
+  const mapStateToProps = state => ({
+    profile: state.profile,
+    errors: state.errors
+  });
+  export default connect(mapStateToProps, { createProfile })(
+    withRouter(CreateProfile)
+  );

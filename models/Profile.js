@@ -13,13 +13,9 @@ const ProfileSchema = new Schema({
 	photoUrl: {
 		type: String
 	},
-	isAMentor: {
-		type: Boolean,
-		default: false
-	},
-	isAMentee: {
-		type: Boolean,
-		default: false
+	userType: {
+		type: String,
+		required: true
 	},
 	handle: {
 		type: String,
@@ -43,10 +39,22 @@ const ProfileSchema = new Schema({
 	company: {
 		type: String
 	},
+	school: {
+		type: String
+	},
 	website: {
 		type: String
 	},
-	location: {
+	town: {
+		type: String
+	},
+	state: {
+		type: String
+	},
+	zipCode: {
+		type: Number
+	},
+	country: {
 		type: String
 	},
 	codingLanguages: {
