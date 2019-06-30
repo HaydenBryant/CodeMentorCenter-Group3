@@ -10,9 +10,7 @@ const Search = () => {
           placeholder="Search programming languages..."
           required
         />
-        <button type="submit" onclick="findPLanguage()">
-          Search
-        </button>
+        <button type="submit">Search</button>
       </form>
       <div id="displaySearchResults">~~~display search results here~~~</div>
     </Fragment>

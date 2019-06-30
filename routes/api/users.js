@@ -131,20 +131,7 @@ router.post("/login", (req, res) => {
 // @desc    Search programming language within users
 // @access  Public
 router.get("/search/:language", function(req, res) {
-  const input = req.params.codingLanguages;
-  console.log(input);
-
-  let item = new RegExp(["^", input, "$"].join(""), "i");
-  User.find({ codingLanguages: item })
-    .then(result => {
-      console.log("Coding Language: ", item, "Profile: ", result);
-      res.send(result);
-    })
-    .catch(err => {
-      console.log(err);
-      res.send(err);
-    });
-  //res.json({ msg: "Programming language api search is working..." });
+  res.json({ msg: "Programming language api search is working..." });
 });
 
 module.exports = router;
