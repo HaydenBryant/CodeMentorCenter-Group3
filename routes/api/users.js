@@ -35,8 +35,7 @@ router.post("/register", (req, res) => {
         return res.status(400).json(errors);
       }
       const newUser = new User({
-        fname: req.body.fname,
-        lname: req.body.lname,
+        name: req.body.name,
         email: req.body.email.toUpperCase(),
         password: req.body.password
       });
@@ -102,8 +101,7 @@ router.post("/login", (req, res) => {
         // User Matched
         const payload = {
           id: user.id,
-          fname: user.fname,
-          lname: user.lname,
+          name: user.name,
           email: user.email
         }; // Create JWT Payload
 
@@ -124,20 +122,6 @@ router.post("/login", (req, res) => {
         return res.status(400).json(errors);
       }
     });
-  });
-});
-
-// @route   GET api/users/search:language
-// @desc    Search programming language within users
-// @access  Public
-// router.get("/search/:language", function(req, res) {
-//   res.json({ msg: "Programming language api search is working..." });
-// });
-router.get("/search/:name", function(req, res) {
-  const name = req.params.name;
-  User.find({ name: name }).then(results => {
-    console.log(results);
-    res.send(results);
   });
 });
 

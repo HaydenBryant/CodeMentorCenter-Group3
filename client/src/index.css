@@ -51,8 +51,6 @@ img {
   width: 100%;
 }
 
-/* Utilities */
-
 /* Text Styles*/
 .x-large {
   font-size: 4rem;
@@ -299,8 +297,11 @@ button {
 
 .container {
   position: relative;
-  padding: 20px;
   top: 85px;
+}
+
+section.container {
+  padding: 20px;
 }
 
 .landing h4 {
@@ -320,6 +321,7 @@ button {
   height: 85px;
   top: 0;
   border-bottom: solid 1px var(--dark-color);
+  background-color: #fff;
   opacity: 0.9;
 }
 
@@ -422,6 +424,12 @@ button {
   position: relative;
   padding-top: 20px;
 }
+.displaySearchedProfiles {
+  margin-top: 30px;
+  display: none;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
 /* Top Mentors Component */
 /* Random Mentors Component */
@@ -463,6 +471,7 @@ button {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
   padding-bottom: 15px;
   border-radius: 6px 6px 6px 6px;
+  background-color: #fff;
 }
 
 .p-card .head {
@@ -486,7 +495,7 @@ button {
 
 .p-card .content {
   display: flex;
-  padding: 10px;
+  padding: 10px 10px 0 10px;
 }
 
 .p-card .img-ct {
@@ -526,6 +535,31 @@ button {
   border: none;
 }
 
+.pLang a:hover,
+.sLang a:hover {
+  color: var(--red-color);
+}
+
+.mentorSummary ul,
+.menteeSummary ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 15px;
+}
+
+.mentorSummary ul li,
+.menteeSummary ul li {
+  display: inline;
+  font-size: 0.7rem;
+  color: #999;
+}
+
+.mentorSummary ul li:first-child,
+.menteeSummary ul li:first-child {
+  padding-right: 20px;
+}
+
 .pSummary {
   padding: 13px;
   font-size: 0.7rem;
@@ -559,6 +593,7 @@ button {
 .ctaRegister .lead {
   margin-top: 15px;
   color: var(--dark-color);
+  padding: 0 25px;
 }
 
 .cta-btn {
@@ -658,6 +693,10 @@ button {
 
 .social-ct ul li:last-child {
   padding-left: 15px;
+}
+
+.sitemap-ct a:hover {
+  color: var(--red-color);
 }
 
 .copyright {
@@ -808,6 +847,7 @@ button {
 @media (max-width: 700px) {
   .container {
     top: 0;
+    min-width: 375px;
   }
 
   .hide-sm {
