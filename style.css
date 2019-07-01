@@ -1,0 +1,66 @@
+
+* {
+    box-sizing: border-box;
+    justify-content: flex-start;
+  }
+
+  body {
+    font-family: 'Dosis', sans-serif;
+  }
+  
+  header {
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+  }
+
+body {
+    text-align: center;
+    background-color: rgb(104, 137, 141);
+  }
+h1 {
+    font-size:50px;
+    color:white;
+  }
+  h2 {
+    color:white;
+  }
+p {
+    color:white;
+  }
+
+.meet { 
+    color:white;
+    padding:10px;
+ }
+
+ .person1, .person2, .person3, .person4, .person5{
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 300px;
+    height:300px;
+    padding: 10px;
+    border: 5px solid gray;
+    margin: 0;
+  }
+  
+.column {
+    float: center;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+.row{
+    justify-content: center;
+    clear: both;
+    display: table;
+  }
+  
+.dot {
+  height: 100px;
+  width: 100px;
+  border: 5px solid white;
+  border-radius: 50%;
+  display: inline-block;
+}
