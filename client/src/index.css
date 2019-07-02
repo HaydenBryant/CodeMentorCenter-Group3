@@ -531,8 +531,7 @@ section.container {
   border: none;
 }
 
-.pLang a:hover,
-.sLang a:hover {
+.pLang a:hover {
   color: var(--red-color);
 }
 
