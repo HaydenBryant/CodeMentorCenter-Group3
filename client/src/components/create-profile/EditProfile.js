@@ -1,8 +1,11 @@
 import React, { Component } from "react";
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { createProfile } from '../../actions/profileActions';
 
-import StateDropdown from "../StateDropdown";
 
-class EditProfile extends Component {
+class CreateProfile extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -11,8 +14,12 @@ class EditProfile extends Component {
             // photo: "",     //not sure how we will choose to handle
             dob: "",
             company: "",   //add school option?
+            school: "",
             website: "",
-            location: "",
+            town: "",
+            state: "",
+            zipCode: "",
+            country: "",
             codingLanguages: "",  //separated by ", " then .split
             frameworks: "",
             skillLevel: "",
@@ -25,13 +32,19 @@ class EditProfile extends Component {
             facebook: "",
             linkedin: "",
             instagram: "",
-            date: "",
+            // date: "",
             errors: {}
         };
 
         this.onChange = this.onChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
     }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.errors) {
+          this.setState({ errors: nextProps.errors });
+        }
+      }
 
     onSubmit(e) {
         e.preventDefault();
@@ -42,7 +55,10 @@ class EditProfile extends Component {
             dob: this.state.dob,
             company: this.state.company,
             website: this.state.website,
-            location: this.state.location,
+            town: this.state.town,
+            state: this.state.state,
+            zipCode: this.state.zipCode,
+            country: this.state.country,
             codingLanguages: this.state.codingLanguages,
             frameworks: this.state.frameworks,
             skillLevel: this.state.skillLevel,
@@ -57,8 +73,8 @@ class EditProfile extends Component {
             instagram: this.state.instagram,
         }
 
-        // this.props.EditProfile(userData, this.props.history);
-        console.log(this.state);
+        this.props.createProfile(userData, this.props.history);
+        // console.log(this.state);
     }
 
     onChange(e) {
@@ -70,7 +86,7 @@ class EditProfile extends Component {
         // const { errors } = this.state;
 
         return (
-            <div className="editProfile">
+            <div className="createProfile">
                 <div className="container">
                     <div className="row">
                         <h1 className="intro">Create your profile here</h1>
@@ -131,32 +147,62 @@ class EditProfile extends Component {
                                 onChange={this.onChange}
                             /> <br />
                             <input
+                                type='text'
+                                placeholder="school Name"
+                                name="school"
+                                value={this.state.school}
+                                onChange={this.onChange}
+                            /> <br />
+                            <input
                                 type='url'
                                 placeholder="Website URL"
                                 name="website"
                                 value={this.state.website}
                                 onChange={this.onChange}
                             /> <br />
-                            {/* <input
-                                type='location'
-                                placeholder="Location"
-                                name="location"
-                                value={this.state.location}
+
+                            {/* create separate Component for state */}
+                            <input
+                                type='text'
+                                placeholder="* Town"
+                                name="town"
+                                value={this.state.town}
                                 onChange={this.onChange}
-                            /> <br /> */}
-                            {/* create seperate component for state StateDropdown */}
-                            {/* <select>
-                                <option value="grapefruit">Grapefruit</option>
-                                <option value="lime">Lime</option>
-                                <option selected value="coconut">Coconut</option>
-                                <option value="mango">Mango</option>
-                            </select> */}
+                                required
+                            />
+                            <input
+                                type='text'
+                                placeholder="* State"
+                                name="state"
+                                value={this.state.state}
+                                onChange={this.onChange}
+                                required
+                            /> <br />
+                            <input
+                                type='number'
+                                placeholder="* Zip Code"
+                                name="zipCode"
+                                value={this.state.zipCode}
+                                onChange={this.onChange}
+                                required
+                            />
+                            <input
+                                type='text'
+                                placeholder="* Country"
+                                name="country"
+                                value={this.state.country}
+                                onChange={this.onChange}
+                                required
+                            /> <br />
+
+
                             <input
                                 type='text'
                                 placeholder="* Coding Languages"
                                 name="codingLanguages"
                                 value={this.state.codingLanguages}
                                 onChange={this.onChange}
+                                info="Please separate each language with a ,"
                                 required
                             /> <br />
                             <input
@@ -181,6 +227,7 @@ class EditProfile extends Component {
                                 name="speakingLanguages"
                                 value={this.state.speakingLanguages}
                                 onChange={this.onChange}
+                                info="Please separate each language with a ,"
                                 required
                             /> <br />
                             <input
@@ -208,15 +255,15 @@ class EditProfile extends Component {
                             <h3>Social Media</h3>
 
                             <input
-                                type='text'
-                                placeholder="Youtube Handle"
+                                type='url'
+                                placeholder="Youtube URL"
                                 name="youtube"
                                 value={this.state.youtube}
                                 onChange={this.onChange}
                             /> <br />
                             <input
-                                type='text'
-                                placeholder="Twitter Handle"
+                                type='url'
+                                placeholder="Twitter URL"
                                 name="twitter"
                                 value={this.state.twitter}
                                 onChange={this.onChange}
@@ -236,8 +283,8 @@ class EditProfile extends Component {
                                 onChange={this.onChange}
                             /> <br />
                             <input
-                                type='text'
-                                placeholder="Instagram Handle"
+                                type='url'
+                                placeholder="Instagram URL"
                                 name="instagram"
                                 value={this.state.instagram}
                                 onChange={this.onChange}
@@ -256,4 +303,14 @@ class EditProfile extends Component {
     }
 }
 
-export default EditProfile;
+CreateProfile.propTypes = {
+    profile: PropTypes.object.isRequired,
+    // errors: PropTypes.object.isRequired
+  };
+  const mapStateToProps = state => ({
+    profile: state.profile,
+    // errors: state.errors
+  });
+  export default connect(mapStateToProps, { createProfile })(
+    withRouter(CreateProfile)
+  );
