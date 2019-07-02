@@ -73,7 +73,6 @@ const ProfileSchema = new Schema({
 	},
 	resume: {
 		type: String,
-		required: true
 	},
 	youtube: {
 		type: String

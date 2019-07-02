@@ -255,15 +255,15 @@ class CreateProfile extends Component {
                             <h3>Social Media</h3>
 
                             <input
-                                type='text'
-                                placeholder="Youtube Handle"
+                                type='url'
+                                placeholder="Youtube URL"
                                 name="youtube"
                                 value={this.state.youtube}
                                 onChange={this.onChange}
                             /> <br />
                             <input
-                                type='text'
-                                placeholder="Twitter Handle"
+                                type='url'
+                                placeholder="Twitter URL"
                                 name="twitter"
                                 value={this.state.twitter}
                                 onChange={this.onChange}
@@ -283,8 +283,8 @@ class CreateProfile extends Component {
                                 onChange={this.onChange}
                             /> <br />
                             <input
-                                type='text'
-                                placeholder="Instagram Handle"
+                                type='url'
+                                placeholder="Instagram URL"
                                 name="instagram"
                                 value={this.state.instagram}
                                 onChange={this.onChange}

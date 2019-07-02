@@ -5,7 +5,7 @@ module.exports = function validateProfileInput(data) {
 	let errors = {};
 
 	data.handle = !isEmpty(data.handle) ? data.handle : "";
-	data.cmcLink = !isEmpty(data.cmcLink) ? data.cmcLink : "";
+	// data.cmcLink = !isEmpty(data.cmcLink) ? data.cmcLink : "";
 	data.speakingLanguages = !isEmpty(data.speakingLanguages)
 		? data.speakingLanguages
 		: "";
@@ -27,9 +27,9 @@ module.exports = function validateProfileInput(data) {
 		errors.skillLevel = "Skill level is required";
 	}
 
-	if (Validator.isEmpty(data.cmcLink)) {
-		errors.cmcLink = "CMC Link is required";
-	}
+	// if (Validator.isEmpty(data.cmcLink)) {
+	// 	errors.cmcLink = "CMC Link is required";
+	// }
 
 	if (Validator.isEmpty(data.speakingLanguages)) {
 		errors.speakingLanguages = "At lease one language is required";
