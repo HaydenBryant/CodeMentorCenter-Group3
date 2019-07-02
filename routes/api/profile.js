@@ -153,13 +153,15 @@ router.post(
 		if (req.body.linkedin) profileFields.linkedin = req.body.linkedin;
 		if (req.body.instagram) profileFields.instagram = req.body.instagram;
 
+		console.log(profileFields);
+
 		// Create or Edit current user profile with unique handle
 		Profile.findOne({ user: req.user.id }).then(profile => {
 			// If profile not exist, then create a new one, Otherwise just update
 
 			// Create new profile
 			if (!profile) {
-				// Check if handle exists (handle should be unoque for all profile)
+				// Check if handle exists (handle should be unique for all profile)
 				Profile.findOne({ handle: profileFields.handle }).then(profile => {
 					if (profile) {
 						errors.handle = "handle already exists";
