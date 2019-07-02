@@ -300,6 +300,10 @@ button {
   top: 85px;
 }
 
+section.container {
+  padding: 20px;
+}
+
 .landing h4 {
   font-size: 1.4rem;
 }
@@ -903,11 +907,10 @@ button {
 @media (max-width: 700px) {
   .container {
     top: 0;
-    min-width: 375px;
   }
 
   section.container {
-    padding: 0;
+    padding: 20px;
   }
 
   .hide-sm {

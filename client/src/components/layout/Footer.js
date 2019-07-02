@@ -1,8 +1,5 @@
 import React, { Fragment } from "react";
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
-=======
->>>>>>> 60f0712c6e9eaef774603e93a58fd8068302264b
 
 const Footer = () => {
   return (
