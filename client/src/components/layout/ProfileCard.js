@@ -44,12 +44,8 @@ const ProfileCard = () => {
             </ul>
             <h5>Speaking Languages</h5>
             <ul className="sLang">
-              <li>
-                <a href="#">English</a>
-              </li>
-              <li>
-                <a href="#">Spanish</a>
-              </li>
+              <li>English</li>
+              <li>Spanish</li>
             </ul>
           </div>
         </div>
@@ -65,7 +61,7 @@ const ProfileCard = () => {
             Long established fact that a reader will be distracted by the
             readable content of a page when looking at its layout. The point of
             using Lorem Ipsum is that it has a more-or-less normal distribution
-            of letters, as opposed to using
+            of letters, as opposed to...
           </p>
         </div>
         <div className="request-btn">
