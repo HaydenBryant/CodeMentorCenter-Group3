@@ -32,7 +32,7 @@ class CreateProfile extends Component {
             facebook: "",
             linkedin: "",
             instagram: "",
-            date: "",
+            // date: "",
             errors: {}
         };
 
@@ -305,11 +305,11 @@ class CreateProfile extends Component {
 
 CreateProfile.propTypes = {
     profile: PropTypes.object.isRequired,
-    errors: PropTypes.object.isRequired
+    // errors: PropTypes.object.isRequired
   };
   const mapStateToProps = state => ({
     profile: state.profile,
-    errors: state.errors
+    // errors: state.errors
   });
   export default connect(mapStateToProps, { createProfile })(
     withRouter(CreateProfile)

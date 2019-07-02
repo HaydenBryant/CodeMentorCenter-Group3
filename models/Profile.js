@@ -71,26 +71,24 @@ const ProfileSchema = new Schema({
 	githubUsername: {
 		type: String
 	},
-	cmcLink: {
+	resume: {
 		type: String,
 		required: true
 	},
-	social: {
-		youtube: {
-			type: String
-		},
-		twitter: {
-			type: String
-		},
-		facebook: {
-			type: String
-		},
-		linkedin: {
-			type: String
-		},
-		instagram: {
-			type: String
-		}
+	youtube: {
+		type: String
+	},
+	twitter: {
+		type: String
+	},
+	facebook: {
+		type: String
+	},
+	linkedin: {
+		type: String
+	},
+	instagram: {
+		type: String
 	},
 	date: {
 		type: Date,
