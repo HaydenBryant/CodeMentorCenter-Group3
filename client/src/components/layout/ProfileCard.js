@@ -17,19 +17,39 @@ const ProfileCard = () => {
           <div className="lang-ct">
             <h5>Programming Languages</h5>
             <ul className="pLang">
-              <li>JavaScript</li>
-              <li>React</li>
-              <li>C#</li>
-              <li>Python</li>
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>PHP</li>
-              <li>Wordpress</li>
+              <li>
+                <a href="#">JavaScript</a>
+              </li>
+              <li>
+                <a href="#">React</a>
+              </li>
+              <li>
+                <a href="#">C#</a>
+              </li>
+              <li>
+                <a href="#">Python</a>
+              </li>
+              <li>
+                <a href="#">HTML5</a>
+              </li>
+              <li>
+                <a href="#">CSS3</a>
+              </li>
+              <li>
+                <a href="#">PHP</a>
+              </li>
+              <li>
+                <a href="#">Wordpress</a>
+              </li>
             </ul>
             <h5>Speaking Languages</h5>
             <ul className="sLang">
-              <li>English</li>
-              <li>Spanish</li>
+              <li>
+                <a href="#">English</a>
+              </li>
+              <li>
+                <a href="#">Spanish</a>
+              </li>
             </ul>
           </div>
         </div>

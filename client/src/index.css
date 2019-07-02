@@ -420,6 +420,13 @@ section.container {
   outline: 0;
 }
 
+.displaySearchedProfiles {
+  margin-top: 30px;
+  display: none;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 /* Top Mentors Component */
 /* Random Mentors Component */
 .top-rated-mentors,
@@ -460,6 +467,7 @@ section.container {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
   padding-bottom: 15px;
   border-radius: 6px 6px 6px 6px;
+  background-color: #fff;
 }
 
 .p-card .head {
@@ -523,6 +531,11 @@ section.container {
   border: none;
 }
 
+.pLang a:hover,
+.sLang a:hover {
+  color: var(--red-color);
+}
+
 .mentorSummary ul,
 .menteeSummary ul {
   display: flex;
@@ -576,6 +589,7 @@ section.container {
 .ctaRegister .lead {
   margin-top: 15px;
   color: var(--dark-color);
+  padding: 0 25px;
 }
 
 .cta-btn {
@@ -675,6 +689,10 @@ section.container {
 
 .social-ct ul li:last-child {
   padding-left: 15px;
+}
+
+.sitemap-ct a:hover {
+  color: var(--red-color);
 }
 
 .copyright {

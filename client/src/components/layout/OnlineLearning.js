@@ -1,24 +1,20 @@
-import React, { Fragment } from 'react';
-import careerdevs_couple from '../../images/cd_higher_learning.jpg';
+import React, { Fragment } from "react";
 
 const OnlineLearning = () => {
   return (
     <Fragment>
-      <div className='higherLearning'>
-        <div className='ad-img'>
-          <img
-            src={careerdevs_couple}
-            alt='CareerDevs Computer Science University'
-          />
+      <div className="higherLearning">
+        <div className="ad-img">
+          <img src={require("../../images/cd_higher_learning.jpg")} />
         </div>
-        <div className='ad-copy'>
+        <div className="ad-copy">
           <h4>Looking to further your mentorship?</h4>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, consectetur
             adipisicing elit, sed labore et dolore magna aliqua.
           </p>
-          <a href='!#' className='btn btn-primary btn-rounded'>
+          <a href="!#" className="btn btn-primary btn-rounded">
             EXPLORE ONLINE LEARNING
           </a>
         </div>
