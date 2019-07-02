@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -43,17 +44,11 @@ const Footer = () => {
         <div className="sitemap-ct">
           <h4>Explore Our Site</h4>
           <ul>
+            <li>Home</li>
+            <li>Mentors</li>
+            <li>Mentees</li>
             <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">Mentors</a>
-            </li>
-            <li>
-              <a href="#">Mentees</a>
-            </li>
-            <li>
-              <a href="#">About Us</a>
+              <Link to="/about">About Us</Link>
             </li>
           </ul>
         </div>
