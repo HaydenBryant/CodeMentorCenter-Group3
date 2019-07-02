@@ -117,14 +117,19 @@ router.post(
 		// Get fields
 		const profileFields = {};
 		profileFields.user = req.user.id;
-		if (req.body.isAMentor) profileFields.isAMentor = req.body.isAMentor;
-		if (req.body.isAMentee) profileFields.isAMentee = req.body.isAMentee;
+		if (req.body.userType) profileFields.userType = req.body.userType;
 		if (req.body.handle) profileFields.handle = req.body.handle;
+		if (req.body.dob) profileFields.dob = req.body.dob;
+		if (req.body.company) profileFields.company = req.body.company;
+		if (req.body.school) profileFields.school = req.body.school;
 		if (req.body.website) profileFields.website = req.body.website;
+		if (req.body.town) profileFields.town = req.body.town;
+		if (req.body.state) profileFields.state = req.body.state;
+		if (req.body.zipCode) profileFields.zipCode = req.body.zipCode;
+		if (req.body.country) profileFields.country = req.body.country;
 		if (req.body.skillLevel) profileFields.skillLevel = req.body.skillLevel;
-		if (req.body.location) profileFields.location = req.body.location;
 		if (req.body.bio) profileFields.bio = req.body.bio;
-		if (req.body.cmcLink) profileFields.cmcLink = req.body.cmcLink;
+		if (req.body.resume) profileFields.resume = req.body.resume;
 		if (req.body.githubusername)
 			profileFields.githubusername = req.body.githubusername;
 		// Coding languages - Split into array
@@ -141,12 +146,14 @@ router.post(
 		}
 
 		// Social
-		profileFields.social = {};
-		if (req.body.youtube) profileFields.social.youtube = req.body.youtube;
-		if (req.body.twitter) profileFields.social.twitter = req.body.twitter;
-		if (req.body.facebook) profileFields.social.facebook = req.body.facebook;
-		if (req.body.linkedin) profileFields.social.linkedin = req.body.linkedin;
-		if (req.body.instagram) profileFields.social.instagram = req.body.instagram;
+		// profileFields.social = {};  shouldnt be needed anymore
+		if (req.body.youtube) profileFields.youtube = req.body.youtube;
+		if (req.body.twitter) profileFields.twitter = req.body.twitter;
+		if (req.body.facebook) profileFields.facebook = req.body.facebook;
+		if (req.body.linkedin) profileFields.linkedin = req.body.linkedin;
+		if (req.body.instagram) profileFields.instagram = req.body.instagram;
+
+		console.log(profileFields);
 
 		// Create or Edit current user profile with unique handle
 		Profile.findOne({ user: req.user.id }).then(profile => {
@@ -154,7 +161,7 @@ router.post(
 
 			// Create new profile
 			if (!profile) {
-				// Check if handle exists (handle should be unoque for all profile)
+				// Check if handle exists (handle should be unique for all profile)
 				Profile.findOne({ handle: profileFields.handle }).then(profile => {
 					if (profile) {
 						errors.handle = "handle already exists";

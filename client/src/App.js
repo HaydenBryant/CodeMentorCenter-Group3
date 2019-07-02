@@ -7,6 +7,8 @@ import Dashboard from "./components/dashboard/Dashboard";
 import PrivateRoute from "./components/common/PrivateRoute";
 // import NotFound from "./components/not-found/NotFound";
 
+import CreateProfile from "./components/create-profile/CreateProfile"
+
 import "./index.css";
 
 import { Provider } from "react-redux";
@@ -39,31 +41,32 @@ if (localStorage.jwtToken) {
 }
 
 class App extends Component {
-  render() {
-    return (
-      <Provider store={store}>
-        <Router>
-          <Fragment>
-            <Navbar />
-            <Route exact path="/" component={Landing} />
-            <section className="container">
-              <Switch>
-                <Route exact path="/mentors" component={Mentors} />
-                <Route exact path="/mentees" component={Mentees} />
-                <Route exact path="/register" component={Register} />
-                <Route exact path="/login" component={Login} />
-              </Switch>
-              <Switch>
-                <PrivateRoute exact path="/dashboard" component={Dashboard} />
-              </Switch>
+	render() {
+		return (
+			<Provider store={store}>
+				<Router>
+					<Fragment>
+						<Navbar />
+						<Route exact path="/" component={Landing} />
+						<section className="container">
+							<Switch>
+								<Route exact path="/mentors" component={Mentors} />
+								<Route exact path="/mentees" component={Mentees} />
+								<Route exact path="/register" component={Register} />
+								<Route exact path="/login" component={Login} />
+								<Route exact path="/createProfile" component={CreateProfile} />
+							</Switch>
+							<Switch>
+								<PrivateRoute exact path="/dashboard" component={Dashboard} />
+							</Switch>
               <Switch>
                 <Route exact path="/about" component={About} />
               </Switch>
-            </section>
-          </Fragment>
-        </Router>
-      </Provider>
-    );
+						</section>
+					</Fragment>
+				</Router>
+			</Provider>
+		);
   }
 }
 

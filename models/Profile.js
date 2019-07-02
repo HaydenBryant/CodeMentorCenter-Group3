@@ -13,13 +13,9 @@ const ProfileSchema = new Schema({
 	photoUrl: {
 		type: String
 	},
-	isAMentor: {
-		type: Boolean,
-		default: false
-	},
-	isAMentee: {
-		type: Boolean,
-		default: false
+	userType: {
+		type: String,
+		required: true
 	},
 	handle: {
 		type: String,
@@ -35,10 +31,22 @@ const ProfileSchema = new Schema({
 	company: {
 		type: String
 	},
+	school: {
+		type: String
+	},
 	website: {
 		type: String
 	},
-	location: {
+	town: {
+		type: String
+	},
+	state: {
+		type: String
+	},
+	zipCode: {
+		type: Number
+	},
+	country: {
 		type: String
 	},
 	codingLanguages: {
@@ -63,26 +71,23 @@ const ProfileSchema = new Schema({
 	githubUsername: {
 		type: String
 	},
-	cmcLink: {
+	resume: {
 		type: String,
-		required: true
 	},
-	social: {
-		youtube: {
-			type: String
-		},
-		twitter: {
-			type: String
-		},
-		facebook: {
-			type: String
-		},
-		linkedin: {
-			type: String
-		},
-		instagram: {
-			type: String
-		}
+	youtube: {
+		type: String
+	},
+	twitter: {
+		type: String
+	},
+	facebook: {
+		type: String
+	},
+	linkedin: {
+		type: String
+	},
+	instagram: {
+		type: String
 	},
 	date: {
 		type: Date,
