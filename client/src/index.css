@@ -420,13 +420,9 @@ section.container {
   outline: 0;
 }
 
-#displaySearchResults {
-  position: relative;
-  padding-top: 20px;
-}
 .displaySearchedProfiles {
   margin-top: 30px;
-  display: none;
+  display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
