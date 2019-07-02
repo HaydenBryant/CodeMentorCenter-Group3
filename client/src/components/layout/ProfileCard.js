@@ -17,14 +17,30 @@ const ProfileCard = () => {
           <div className="lang-ct">
             <h5>Programming Languages</h5>
             <ul className="pLang">
-              <li>JavaScript</li>
-              <li>React</li>
-              <li>C#</li>
-              <li>Python</li>
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>PHP</li>
-              <li>Wordpress</li>
+              <li>
+                <a href="#">JavaScript</a>
+              </li>
+              <li>
+                <a href="#">React</a>
+              </li>
+              <li>
+                <a href="#">C#</a>
+              </li>
+              <li>
+                <a href="#">Python</a>
+              </li>
+              <li>
+                <a href="#">HTML5</a>
+              </li>
+              <li>
+                <a href="#">CSS3</a>
+              </li>
+              <li>
+                <a href="#">PHP</a>
+              </li>
+              <li>
+                <a href="#">Wordpress</a>
+              </li>
             </ul>
             <h5>Speaking Languages</h5>
             <ul className="sLang">
@@ -45,7 +61,7 @@ const ProfileCard = () => {
             Long established fact that a reader will be distracted by the
             readable content of a page when looking at its layout. The point of
             using Lorem Ipsum is that it has a more-or-less normal distribution
-            of letters, as opposed to using
+            of letters, as opposed to...
           </p>
         </div>
         <div className="request-btn">

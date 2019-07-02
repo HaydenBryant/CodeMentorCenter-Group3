@@ -363,7 +363,7 @@ button {
   display: block;
   top: 60px;
   width: 100%;
-  padding: 55px 0;
+  padding: 40px 0;
   background-color: #8590aa;
 }
 
@@ -416,6 +416,13 @@ button {
   outline: 0;
 }
 
+.displaySearchedProfiles {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 /* Top Mentors Component */
 /* Random Mentors Component */
 .top-rated-mentors,
@@ -456,6 +463,7 @@ button {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
   padding-bottom: 15px;
   border-radius: 6px 6px 6px 6px;
+  background-color: #fff;
 }
 
 .p-card .head {
@@ -519,6 +527,10 @@ button {
   border: none;
 }
 
+.pLang a:hover {
+  color: var(--red-color);
+}
+
 .mentorSummary ul,
 .menteeSummary ul {
   display: flex;
@@ -572,6 +584,7 @@ button {
 .ctaRegister .lead {
   margin-top: 15px;
   color: var(--dark-color);
+  padding: 0 25px;
 }
 
 .cta-btn {
@@ -734,6 +747,10 @@ button {
 
 .social-ct ul li:last-child {
   padding-left: 15px;
+}
+
+.sitemap-ct a:hover {
+  color: var(--red-color);
 }
 
 .copyright {
